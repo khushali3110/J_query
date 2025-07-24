@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+    <script src="./script.js"></script>
+
+  
+  </head>
+  <body>
+    <button id="hide">hide</button>
+    <button id="show">show</button>
+    <button id="hideshow">hide/show</button>
+
+    <hr />
+
+    <button id="slideUp">slide show</button>
+    <button id="slideDown">slide hide</button>
+    <button id="slideUpDown">slide hide/show</button>
+
+    <hr />
+
+    <button id="fadeUp">Fade show</button>
+    <button id="fadeDown">Fade Down</button>
+    <button id="fadeUpDown">Fade Up/Down</button>
+
+    <p id="para">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore veritatis
+      veniam tempora, beatae commodi pariatur explicabo praesentium cumque
+      eveniet ab?
+    </p>
+
+    <script>
+      $(document).ready(function () {
+        $("#hide").click(() => {
+          $("#para").hide(2000);
+        });
+
+        $("#show").click(() => {
+          $("#para").show();
+        });
+
+        $("#hideshow").click(() => {
+          $("#para").toggle();
+        });
+
+
+
+        $("#slideUp").click(() => {
+          $("#para").slideUp();
+        });
+
+        $("#slideDown").click(() => {
+          $("#para").slideDown();
+        });
+
+        $("#slideUpDown").click(() => {
+          $("#para").slideToggle();
+        });
+
+        
+
+        $("#fadeUp").click(() => {
+          $("#para").fadeIn();
+        });
+
+        $("#fadeDown").click(() => {
+          $("#para").fadeOut();
+        });
+
+        $("#fadeUpDown").click(() => {
+          $("#para").fadeToggle();
+        })
+
+        
+      });
+    </script>
+  </body>
+</html>
