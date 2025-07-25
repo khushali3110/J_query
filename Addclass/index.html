@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        #para{
+            color: rgb(191, 156, 156);
+            background-color: black(32, 56, 106);
+        }
+
+        .show{
+            background-color: blueviolet !important;
+            color: black !important;
+        }
+
+        .menu{
+            border-radius: 5px;
+            padding: 10px;
+            color: rgb(13, 87, 62) !important;
+        }
+    </style>
+</head>
+<body>
+    <button id="Add">add</button>
+    <button id="Remove">remove</button>
+    <button id="AddRemove">toggle</button>
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt voluptatibus nulla quisquam iste laborum consequatur, mollitia fugit excepturi est quia Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique laboriosam harum laudantium aut dolores praesentium sequi eveniet perferendis voluptate obcaecati?</p>
+
+    <script>
+        $(document).ready(()=> {
+            $("#Add").click(()=>{
+                $("#para").addClass("show")
+            })
+
+            $("#Remove").click(()=>{
+                $("#para").removeClass("show")
+            })
+
+            $("#AddRemove").click(()=>{
+                $("#para").toggleClass("menu")
+            })
+        })
+    </script>
+</body>
+</html>

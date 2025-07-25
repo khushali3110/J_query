@@ -16,10 +16,21 @@
             $("#name").css('text-transform', "uppercase"); 
             $("#name").css('background-color', "green");
         });
-        $("#name").keydown(() => {
-            $("#name").css('text-transform', "lowercase");
-            $("#name").css('background-color', "red");
+        // $("#name").keydown(() => {
+        //     $("#name").css('text-transform' ,"lowercase");
+        //     $("#name").css('background-color', "red");
+        // });
+
+
+        // multiple class
+
+         $("#name").keydown(() => {
+            $("#name").css({
+                'background-color' : "blue", 
+                'text-transform' : "lowercase"
+            })
         });
+
     });
 </script>
 </body>
