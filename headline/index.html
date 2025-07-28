@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+
+h1{
+  font-family: 'Roboto', sans-serif;
+}
+
+#changingText {
+  color: #ffd166;
+  border-right: 1px solid black;
+  animation: cursoranim 1s linear infinite;
+}
+
+@keyframes cursoranim {
+  50% {
+    border-right: 1px solid rgba(0, 0, 0, 0);
+  }
+}
+
+    </style>
+</head>
+<body>
+    <h1>Make something <span id="changingText"></span></h1>
+</body>
+
+
+<script>
+    let yourtext = [
+  ["awesome", "#ffd166"],
+  ["stunning", "#7DE2D1"],
+  ["creative", "#DE3C4B"]
+];
+
+let x = 0;
+let y = 0;
+//how fast typing is
+let wait = 300;
+//how long you want to text stay before overwriting
+let additionalwait = 5;
+let txt = yourtext[0][0].split("");
+let out = "";
+let retyping = setInterval(function () {
+  document.getElementById("changingText").innerHTML = out;
+  if (x > txt.length - 1) {
+  } else {
+    out += txt[x];
+  }
+  x++;
+  if (x == txt.length + 2 + additionalwait) {
+    if (y == yourtext.length - 1) {
+      y = 0;
+      txt = yourtext[y][0].split("");
+      out = "";
+      document.getElementById("changingText").innerHTML = out;
+      document.getElementById("changingText").style.color = yourtext[y][1];
+      x = 0;
+    } else {
+      y += 1;
+      txt = yourtext[y][0].split("");
+      out = "";
+      document.getElementById("changingText").innerHTML = out;
+      document.getElementById("changingText").style.color = yourtext[y][1];
+      x = 0;
+    }
+  }
+}, wait);
+
+</script>
+</html>
